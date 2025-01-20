@@ -1,9 +1,9 @@
-#whether or not a person is allowed to ride a rollercoaster!
+#whether or not to allow a person to ride a rollercoaster based on their height
 height=int(input("What's your Height in cm? "))
 bill=0
-
 if height>=120:
     print("You are allowed to ride a rollercoaster !")
+    #final bill based on whether or not to allow a person to ride a rollercoaster based on their age
     age=int(input("What's your Age? "))
     if age<=12:
         bill=5
@@ -14,6 +14,7 @@ if height>=120:
     else:
         bill=12
         print("Adult tickets are $12")
+    #final bill based on whether or not the person want to have a photo take
     wants_photo=input("Do you want to have a photo take? Type y for Yes and n for No! ")
     if wants_photo=="y":
         #Add $3 to their bill
