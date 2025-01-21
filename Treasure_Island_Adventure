@@ -20,13 +20,36 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
 ''')
+
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+choice1=input('You\'re at a CrossRoad, Where do you want to go? Type "left" or "right" ').lower()
+if choice1== "left":
+    choice2=input('You\'ve come to a lake. There is an island in the middle of the lake! '
+          'Type "wait" to wait for a boat or Type "swim" to swim across! ')
+    if choice2=="wait":
+        choice3=input("You arrived the island unharmed. It's time for you to win the treasure! "
+                      "There is a small palace with 3 doors! One red, one yellow, and one blue. "
+                      "Which color would you choose? red/yellow/blue?").lower()
+        if choice3 == "red":
+            print("It's a room full of fire, Game Over! Better luck next time :)")
+        elif choice3 == "blue":
+            print("Game Over! You chose an empty room! Better luck next time :)")
+        elif choice3=="yellow":
+            print("Hurray! You found the treasure! You Win! Congratulations $$$$$ :) :) $$$$$")
+        else:
+            print("Oh no! You get attacked by an angry trout.... Game over! Better luck next time : )")
+
+else:
+    print("You fell into a hole. Game Over! Better luck next time :)")
+
+(OR)
+
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 choice1=str(input("You are at a CrossRoad, Where do you want to go? Type \"left\" or \"right\" "))
 choice1.lower()
-if choice1== "right":
-    print("Oh no! You fell into a hole. Game Over! Better luck next time :)")
-elif choice1=="left":
+if choice1=="left":
     choice2=input("You've come to a lake. There is an island in the middle of the lake! Type \"wait\" to wait for a boat or Type \"swim\" to swim across! ")
     choice2.lower()
     if choice2=="swim":
@@ -40,3 +63,5 @@ elif choice1=="left":
             print("Game Over! You chose an empty room! Better luck next time :)")
         else:
             print("Hurray! You found the treasure! You Win! Congratulations $$$$$ :) :) $$$$$")
+else:
+    print("Oh no! You fell into a hole. Game Over! Better luck next time :)")
